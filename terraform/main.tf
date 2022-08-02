@@ -54,10 +54,5 @@ resource "azurerm_kusto_database" "eventhub-db-dev" {
 
 }
 
-resource "azurerm_eventhub_consumer_group" "eventhub-cg-dev" {
-  name                = var.eventhub_consumer_group_name
-  namespace_name      = azurerm_eventhub_namespace.eventhub-ns-dev.name
-  eventhub_name       = azurerm_eventhub.eventhub-dev.name
-  resource_group_name = azurerm_resource_group.rg.name
-}
+
 

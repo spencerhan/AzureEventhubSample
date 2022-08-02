@@ -5,3 +5,4 @@ variables.tf
 *.ini
 *.tfstate
 *.backup
+.vscode/*
