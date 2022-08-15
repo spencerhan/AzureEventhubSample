@@ -1,11 +1,14 @@
 import time
 import json
+import configparser
 from csv import reader
 from azure.eventhub import EventHubProducerClient, EventData
 
 # TO-DO adding data ouput a
-connection_str = '<CONNECTION STRING>'
-eventhub_name = '<EVENTHUB NAME>'
+config = configparser.ConfigParser()
+config.read('config.ini')
+connection_str = config['EVENTHUB']['EVENTHUB_CONNCECTION_STRING']
+eventhub_name = config['EVENTHUB']['EVENTHUB_NAME']
 
 
 class SampleData:
